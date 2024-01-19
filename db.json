@@ -1,0 +1,62 @@
+{
+    "cards": [
+      {"suit": "hearts", "rank": "ace", "color": "red"},
+      {"suit": "hearts", "rank": "2", "color": "red"},
+      {"suit": "hearts", "rank": "3", "color": "red"},
+      {"suit": "hearts", "rank": "4", "color": "red"},
+      {"suit": "hearts", "rank": "5", "color": "red"},
+      {"suit": "hearts", "rank": "6", "color": "red"},
+      {"suit": "hearts", "rank": "7", "color": "red"},
+      {"suit": "hearts", "rank": "8", "color": "red"},
+      {"suit": "hearts", "rank": "9", "color": "red"},
+      {"suit": "hearts", "rank": "10", "color": "red"},
+      {"suit": "hearts", "rank": "jack", "color": "red"},
+      {"suit": "hearts", "rank": "queen", "color": "red"},
+      {"suit": "hearts", "rank": "king", "color": "red"},
+      
+      {"suit": "diamonds", "rank": "ace", "color": "red"},
+      {"suit": "diamonds", "rank": "2", "color": "red"},
+      {"suit": "diamonds", "rank": "3", "color": "red"},
+      {"suit": "diamonds", "rank": "4", "color": "red"},
+      {"suit": "diamonds", "rank": "5", "color": "red"},
+      {"suit": "diamonds", "rank": "6", "color": "red"},
+      {"suit": "diamonds", "rank": "7", "color": "red"},
+      {"suit": "diamonds", "rank": "8", "color": "red"},
+      {"suit": "diamonds", "rank": "9", "color": "red"},
+      {"suit": "diamonds", "rank": "10", "color": "red"},
+      {"suit": "diamonds", "rank": "jack", "color": "red"},
+      {"suit": "diamonds", "rank": "queen", "color": "red"},
+      {"suit": "diamonds", "rank": "king", "color": "red"},
+
+      {"suit": "spades", "rank": "ace", "color": "black"},
+      {"suit": "spades", "rank": "2", "color": "black"},
+      {"suit": "spades", "rank": "3", "color": "black"},
+      {"suit": "spades", "rank": "4", "color": "black"},
+      {"suit": "spades", "rank": "5", "color": "black"},
+      {"suit": "spades", "rank": "6", "color": "black"},
+      {"suit": "spades", "rank": "7", "color": "black"},
+      {"suit": "spades", "rank": "8", "color": "black"},
+      {"suit": "spades", "rank": "9", "color": "black"},
+      {"suit": "spades", "rank": "10", "color": "black"},
+      {"suit": "spades", "rank": "jack", "color": "black"},
+      {"suit": "spades", "rank": "queen", "color": "black"},
+      {"suit": "spades", "rank": "king", "color": "black"},
+
+      {"suit": "clubs", "rank": "ace", "color": "black"},
+      {"suit": "clubs", "rank": "2", "color": "black"},
+      {"suit": "clubs", "rank": "3", "color": "black"},
+      {"suit": "clubs", "rank": "4", "color": "black"},
+      {"suit": "clubs", "rank": "5", "color": "black"},
+      {"suit": "clubs", "rank": "6", "color": "black"},
+      {"suit": "clubs", "rank": "7", "color": "black"},
+      {"suit": "clubs", "rank": "8", "color": "black"},
+      {"suit": "clubs", "rank": "9", "color": "black"},
+      {"suit": "clubs", "rank": "10", "color": "black"},
+      {"suit": "clubs", "rank": "jack", "color": "black"},
+      {"suit": "clubs", "rank": "queen", "color": "black"},
+      {"suit": "clubs", "rank": "king", "color": "black"}
+
+
+    ]
+  }
+  
