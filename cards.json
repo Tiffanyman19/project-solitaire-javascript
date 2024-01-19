@@ -55,8 +55,6 @@
       {"suit": "clubs", "rank": "jack", "color": "black"},
       {"suit": "clubs", "rank": "queen", "color": "black"},
       {"suit": "clubs", "rank": "king", "color": "black"}
-
-
     ]
   }
   
