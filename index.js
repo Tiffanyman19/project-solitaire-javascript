@@ -1,9 +1,9 @@
 /*Pickle1 Pickle2 Pickle3 Pickle4*/ 
-
+/*
 const deckElement = document.getElementById('deck');
-const tableauElement = document.getElementById('tableau');
+const tableauElement = document.getElementById('tableau');*/
 
-// Fetching card data from the local JSON file to generate image
+//Fetching card data from the local JSON file to generate image
 const API = "http://localhost:3000/cards";
 
 /*mvp word*/
@@ -30,10 +30,13 @@ fetch(API)
     const playingCards = cardAttributes.map((attributes) => {
       return {
         suit: attributes.suit,
-        rank: attributes.rank,
+        rank: attributes.rank};
+    });
   })
-  .catch(error => console.error(w));
+  .catch(error => console.error(error));
 
+
+/*
 function createCards(cardsData) {
   cardsData.forEach((card, json) => {
     const cardElement = document.createElement('div');
@@ -110,5 +113,4 @@ var playedCards =
 '#waste .card,' +
 '#fnd .card,' +
 '#tab .card:last-child';
-
-
+*/
