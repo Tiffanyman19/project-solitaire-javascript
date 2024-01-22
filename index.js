@@ -1,62 +1,59 @@
-/*Pickle*/ 
+/*Pickle1 Pickle2 Pickle3 Pickle4*/ 
 
-const cardContainer = document.getElementById('cardContainer');
+const deckElement = document.getElementById('deck');
+const tableauElement = document.getElementById('tableau');
 
 // Fetching card data from the local JSON file to generate image
-fetch('path/to/cards.json') // Update with the correct file path
+const API = "http://localhost:3000/cards";
+
+/*mvp word*/
+
+function getSuitSymbol(suit) {
+    // Map suits to Unicode symbols
+    const suitSymbols = {
+        hearts: '\u2665',
+        diamonds: '\u2666',
+        clubs: '\u2663',
+        spades: '\u2660',
+    };
+    return suitSymbols[suit] || '';
+}
+
+
+// Fetch card attributes from the JSON file
+fetch(API) 
   .then(response => response.json())
-  .then(cardsData => {
-    const shuffledCards = shuffle(cardsData);
+  .then(data => {
+    
+    const cardAttributes = data.cards; 
 
-    const stack = document.createElement('div');
-    stack.classList.add('card-stack');
-
-    // Position 
-    stack.style.left = `${(window.innerWidth - 100) / 2}px`;
-    stack.style.top = `${(window.innerHeight - 150) / 2}px`;
-
-    shuffledCards.forEach((card, index) => {
-      const cardElement = document.createElement('div');
-      cardElement.classList.add('card');
-      cardElement.style.backgroundImage = `url(${card.img})`;
-
-      // Position of each card in a cascading manner 
-      cardElement.style.left = `${index * 20}px`;
-      cardElement.style.top = `${index * 10}px`;
-
-      // Drag event to the cards
-      cardElement.addEventListener('mousedown', startDragging);
-      cardElement.addEventListener('mouseup', stopDragging);
-
-      // Append the card to the stack
-      stack.appendChild(cardElement);
-    });
-
-    // Click event 
-    stack.addEventListener('click', drawCard);
-
-    // Append the stack to the card container
-    cardContainer.appendChild(stack);
+    const playingCards = cardAttributes.map((attributes) => {
+      return {
+        suit: attributes.suit,
+        rank: attributes.rank,
   })
-  .catch(error => console.error('Error fetching card data:', error));
+  .catch(error => console.error(w));
 
-// Adding shuffle
-function shuffle(array) {
-  // shuffle algorithm
-  return array;
+function createCards(cardsData) {
+  cardsData.forEach((card, json) => {
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('card');
+    cardElement.textContent = `${card.rank} of ${card.suit}`;
+
+    // Add drag event to the cards
+    cardElement.addEventListener('mousedown', startDragging);
+    cardElement.addEventListener('mouseup', stopDragging);
+
+    // Append the card to the container
+    cardContainer.appendChild(cardElement);
+  });
 }
 
-// Drawing a card
-function drawCard() {
-  // Implement your logic for drawing a card
-  console.log('Card drawn!');
-}
 
-// Variables for handling drag events
+// Placeholder functions for drag events
 let isDragging = false;
 let offsetX, offsetY, draggedElement;
 
-// Functions for drag events
 function startDragging(e) {
   e.preventDefault();
   isDragging = true;
@@ -81,3 +78,37 @@ document.addEventListener('mousemove', (e) => {
     draggedElement.style.top = y + 'px';
   }
 });
+
+
+var s = [];
+
+// build waste pile
+var w = [];
+
+// build foundations
+var spades = [];
+var hearts = [];
+var diamonds = [];
+var clubs = [];
+
+// build table
+var t = [];
+t[1] = t[2] = t[3] = t[4] = t[5] = t[6] = t[7] = [];
+
+// build table
+var table = [];
+table['stock'] = s;
+table['waste'] = w;
+table['spades'] = spades;
+table['hearts'] = hearts;
+table['diamonds'] = diamonds;
+table['clubs'] = clubs;
+table['tab'] = t;
+
+// initial face up cards
+var playedCards =
+'#waste .card,' +
+'#fnd .card,' +
+'#tab .card:last-child';
+
+
