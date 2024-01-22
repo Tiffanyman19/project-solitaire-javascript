@@ -17,6 +17,7 @@ function getSuitSymbol(suit) {
         spades: '\u2660',
     };
     return suitSymbols[suit] || '';
+  //code
 }
 
 
